@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:DAWNRemoteConfiguration}",
+            "name": "Debug Deploy",
+            "program": "${workspaceFolder:DAWNRemoteConfiguration}/.build/debug/Deploy",
+            "preLaunchTask": "swift: Build Debug Deploy"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:DAWNRemoteConfiguration}",
+            "name": "Release Deploy",
+            "program": "${workspaceFolder:DAWNRemoteConfiguration}/.build/release/Deploy",
+            "preLaunchTask": "swift: Build Release Deploy"
+        }
+    ]
+}

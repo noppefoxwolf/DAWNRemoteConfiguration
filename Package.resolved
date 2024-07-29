@@ -1,0 +1,15 @@
+{
+  "originHash" : "e917cbfc185ed274cae0e874359a43f75c2d46c283495afde5cc5240e178b072",
+  "pins" : [
+    {
+      "identity" : "semanticversioning",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/noppefoxwolf/SemanticVersioning",
+      "state" : {
+        "revision" : "7eaca50fb6b9ee4924310efc1e8ef018b0295f10",
+        "version" : "0.0.6"
+      }
+    }
+  ],
+  "version" : 3
+}
