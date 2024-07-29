@@ -14,6 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/noppefoxwolf/SemanticVersioning", from: "0.0.6"),
+        .package(url: "https://github.com/mxcl/Path.swift", from: "1.4.1"),
     ],
     targets: [
         .target(
@@ -27,6 +28,7 @@ let package = Package(
             dependencies: [
                 "RemoteConfigurationCore",
                 "SemanticVersioning",
+                .product(name: "Path", package: "Path.swift"),
             ]
         ),
         .target(

@@ -1,6 +1,7 @@
 import Foundation
 import RemoteConfigurationCore
 import SemanticVersioning
+import Path
 
 // EditMe
 let developRemoteConfiguration = RemoteConfiguration(
@@ -14,10 +15,12 @@ let developRemoteConfiguration = RemoteConfiguration(
 let encoder = JSONEncoder()
 encoder.outputFormatting = .sortedKeys
 
-let developData = try encoder.encode(developRemoteConfiguration)
+let data = try encoder.encode(developRemoteConfiguration)
 let currentFilePath = URL(filePath: FileManager.default.currentDirectoryPath)
-let url = currentFilePath.appending(
-    components: "output", "develop.json"
-)
-try developData.write(to: url)
+
+let outputPath = Path.cwd/"output"
+_ = try? outputPath.mkdir()
+let path = outputPath/"develop.json"
+
+try data.write(to: path)
 
