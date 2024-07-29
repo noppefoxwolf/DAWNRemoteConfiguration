@@ -3,7 +3,7 @@ import RemoteConfigurationCore
 import SemanticVersioning
 
 // EditMe
-let remoteConfiguration = RemoteConfiguration(
+let developRemoteConfiguration = RemoteConfiguration(
     version: SemanticVersion(major: 1, minor: 0, patch: 0),
     minimumApplicationVersion: SemanticVersion(major: 1, minor: 0, patch: 0),
     stableApplicationVersion: SemanticVersion(major: 1, minor: 0, patch: 0),
@@ -13,6 +13,11 @@ let remoteConfiguration = RemoteConfiguration(
 // export process
 let encoder = JSONEncoder()
 encoder.outputFormatting = .sortedKeys
-let data = try encoder.encode(remoteConfiguration)
 
-print(String(data: data, encoding: .utf8)!)
+let developData = try encoder.encode(developRemoteConfiguration)
+let currentFilePath = URL(filePath: FileManager.default.currentDirectoryPath)
+let url = currentFilePath.appending(
+    components: "develop.json"
+)
+try developData.write(to: url)
+
