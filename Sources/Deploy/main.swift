@@ -13,7 +13,7 @@ let developRemoteConfiguration = RemoteConfiguration(
 
 // export process
 let encoder = JSONEncoder()
-encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+encoder.outputFormatting = [.sortedKeys, .prettyPrinted, .withoutEscapingSlashes]
 
 let data = try encoder.encode(developRemoteConfiguration)
 
