@@ -5,7 +5,7 @@ import Path
 
 // EditMe
 let developRemoteConfiguration = RemoteConfiguration(
-    version: SemanticVersion(major: 1, minor: 0, patch: 0),
+    version: SemanticVersion(major: 1, minor: 0, patch: 1),
     minimumApplicationVersion: SemanticVersion(major: 1, minor: 0, patch: 0),
     stableApplicationVersion: SemanticVersion(major: 1, minor: 0, patch: 0),
     appstoreURL: URL(string: "https://apps.apple.com/app/id1668645019")!
