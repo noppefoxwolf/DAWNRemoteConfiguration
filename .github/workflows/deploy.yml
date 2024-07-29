@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - Sources/Deploy/main.swift
 
 permissions:
   contents: write
