@@ -16,7 +16,6 @@ let encoder = JSONEncoder()
 encoder.outputFormatting = .sortedKeys
 
 let data = try encoder.encode(developRemoteConfiguration)
-let currentFilePath = URL(filePath: FileManager.default.currentDirectoryPath)
 
 let outputPath = Path.cwd/"output"
 _ = try? outputPath.mkdir()
