@@ -17,7 +17,7 @@ encoder.outputFormatting = .sortedKeys
 let developData = try encoder.encode(developRemoteConfiguration)
 let currentFilePath = URL(filePath: FileManager.default.currentDirectoryPath)
 let url = currentFilePath.appending(
-    components: "develop.json"
+    components: "output", "develop.json"
 )
 try developData.write(to: url)
 
